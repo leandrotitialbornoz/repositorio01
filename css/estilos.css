@@ -1,0 +1,185 @@
+
+html body{
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #F4F4F4;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background: #FFF059;
+}
+/* Producto */
+
+/* Titulo */
+.titulo{
+    font-weight: 400;
+    font-size: 2.3em;
+    color: #333;
+    padding: 20px 0 0 0;
+
+}
+
+/* Seccion Contenedora principal */
+.principal{
+    text-align: center;
+    width: 90%;
+    height: auto;
+
+    margin-top: 40px;
+    display: inline-block;
+}
+
+/* Imagen Producto */
+.img-prod{
+    border: 1px solid #ddd;
+}
+
+/* Seccion Contenedora del detalle */
+.detalle{
+    display: inline-block;
+    text-align: left;
+    margin-left: 40px;
+}
+
+
+/* Precio */
+.ch-price{
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+/* Seccion Contenedora de los Selects */
+.selects{
+    width: 200px;
+}
+
+.alinear{
+    display: inline-block;
+    line-height: 12px;
+    margin-top: 20px;
+}
+
+.demo-dropdown1{
+    margin-left: 8px;
+}
+
+.demo-dropdown2{
+    margin-left: 8px;
+
+}
+
+/* Boton */
+.ch-btn{
+    margin: 10px 0 10px 0;
+}
+
+/* Slider de imagenes */
+.carousel-imgs li img{
+    height:150px;
+    width:150px;
+}
+.demo-carousel{
+    width: 600px;
+    padding-top: 5px ;
+}
+
+
+
+
+
+/* PESTAÑAS */
+/*contenedor*/
+#container {
+    margin: 30px auto;
+    width: 90%;
+    background-color: #F4F4F4;
+}
+#container input {
+    height: 2.5em;
+    visibility: hidden;
+}
+#container label {
+    background: #FFFFFF;
+    border-radius: .25em .25em 0 0;
+    border: solid 1px #ddd;
+    color: #888;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 1em;
+    height: 2.5em;
+    line-height: 2.5em;
+    margin-right: .25em;
+    padding: 0 1.5em;
+    text-align: center;
+}
+#container input:hover + label {
+    background: #ddd;
+    color: #666;
+}
+#container input:checked + label {
+    background: #f1f1f1;
+    color: #444;
+    position: relative;
+    z-index: 6;
+}
+/*contenido de pestaña*/
+#content {
+    background: #FFFFFF;
+    border: solid 1px #dddddd;
+    border-radius: 0 .25em .25em .25em;
+    min-height: 25em;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    text-align: left;
+}
+#content div {
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+    width: 90%;
+}
+#content-2{
+    padding: 10px 10px 10px 20px;
+}
+#container input#tab-1:checked ~ #content #content-1,
+#container input#tab-2:checked ~ #content #content-2{
+    opacity: 1;
+    z-index: 100;
+}
+/*cajas con color de fondo*/
+.cajaBuyer{
+    border-radius: 8px;
+    margin: 0 0 0 5%;
+    width: 100%;
+    background-color: #E4F2F9;
+    display: block;
+    height: 50px;
+    padding: 15px 0 0 15px;
+
+}
+/*cajas con color de fondo*/
+.cajaSeller{
+    border-radius: 8px;
+    margin: 0 0 0 5%;
+    width: 100%;
+    background-color: #E9F4E4;
+    display: block;
+    height: 50px;
+    padding: 15px 0 0 15px;
+}
+/*Titulos de las cajas*/
+.buyer{
+    color: #3A87AD;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.seller{
+    color: #468847;
+    font-weight: bold;
+    margin-left: 20px;
+}

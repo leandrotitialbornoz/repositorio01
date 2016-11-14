@@ -1,0 +1,44 @@
+/*!
+ * tiny.js v0.2.3
+ *
+ * Copyright (c) 2015, MercadoLibre.com
+ * Released under the MIT license.
+ * https://raw.githubusercontent.com/mercadolibre/tiny.js/master/LICENSE
+ */
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = parent;
+/**
+ * Get the parent of an element, optionally filtered by a tag
+ *
+ * @param {HTMLElement} el
+ * @param {String} tagname
+ * @returns {HTMLElement}
+ *
+ * @example
+ * tiny.parent(el, 'div');
+ */
+function parent(el, tagname) {
+    var parentNode = el.parentNode;
+    var tag = tagname ? tagname.toUpperCase() : tagname;
+
+    if (parentNode === null) {
+        return parentNode;
+    }
+
+    if (parentNode.nodeType !== 1) {
+        return parent(parentNode, tag);
+    }
+
+    if (tagname !== undefined && parentNode.tagName === tag) {
+        return parentNode;
+    } else if (tagname !== undefined && parentNode.tagName !== tag) {
+        return parent(parentNode, tag);
+    } else if (tagname === undefined) {
+        return parentNode;
+    }
+}
+module.exports = exports["default"];
